@@ -310,7 +310,7 @@ class LabelledChemical(object):
         Raises:
             ValueError: :py:attr:`~data_isotopes` is corrupted in some way.
         """
-        # tol_isomass = 3  # arbitrary max mass allowed between two isotope masses (in u)
+        tol_isomass = 200  # arbitrary max mass allowed between two isotope masses (in u)
         for element, data_el in data_isotopes.items():
             if "mass" not in data_el or "abundance" not in data_el:
                 raise ValueError(
